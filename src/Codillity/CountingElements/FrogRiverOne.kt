@@ -5,7 +5,7 @@ fun main() {
 
 private fun solution(X: Int, A: IntArray): Int {
 
-    //HashMap이 좀 더 빠른 듯 같은 O(N)
+    //HashMap이 좀 더 빠른 듯 같은 O(N)/
     val leaf = mutableSetOf<Int>()
     A.forEachIndexed { index, i ->
         leaf += i
