@@ -20,7 +20,7 @@ private fun solution(A: IntArray): Int {
         return -1
     }
     var count = 0
-    //반이 넘는것이기 때문에 중앙은 항상 최고 값이다.
+    //반이 넘는것이기 때문에 중앙은 항상 최고 값이다.d
     val cadidate = A[length / 2]
     for (a in A) {
         if (a == cadidate) {
