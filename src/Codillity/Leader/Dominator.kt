@@ -10,6 +10,7 @@ A[6] = 3    A[7] = 3
 
 fun main() {
     println(solution(intArrayOf(3,4,3,2,3,-1,3,3)))
+    println(solution(intArrayOf(3,4,3,2,3,-1,3,3)))
 }
 
 private fun solution(A: IntArray): Int {
