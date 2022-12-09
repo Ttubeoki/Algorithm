@@ -26,28 +26,29 @@ private fun solution(numbers: IntArray, target: Int): Int {
 //    return sums.count { it == target }
 
   //2. DFS를 활용한 풀이
-    var n = numbers.size
-
-    fun dfs(index: Int, result: Int) {
-        if (index == n) {
-            if (result == target) {
-                answer += 1
-            }
-        } else {
-            dfs(index + 1, result + numbers[index])
-            dfs(index + 1, result - numbers[index])
-        }
-    }
-
-    dfs(0, 0)
-    return answer
-
-
-//    val sumFromTen = numbers.fold(listOf(0)) { total, i ->
-//        println(total)
-//        total.run {
-//            map { it + i } + map { it - i }
+//    var n = numbers.size
+//
+//    fun dfs(index: Int, result: Int) {
+//        if (index == n) {
+//            if (result == target) {
+//                answer += 1
+//            }
+//        } else {
+//            dfs(index + 1, result + numbers[index])
+//            dfs(index + 1, result - numbers[index])
 //        }
 //    }
-//    println("folded: $sumFromTen") // folded: 39
+//
+//    dfs(0, 0)
+//    return answer
+
+
+    val sumFromTen = numbers.fold(listOf(0)) { total, i ->
+        println(total)
+        total.run {
+            map { it + i } + map { it - i }
+        }
+    }
+    println("folded: $sumFromTen") // folded: 39
+    return sumFromTen[0]
 }
